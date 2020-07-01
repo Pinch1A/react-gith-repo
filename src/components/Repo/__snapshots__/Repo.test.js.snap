@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Repo> renders without crashing 1`] = `
+<styled.div>
+  <styled.div>
+    <a
+      href="test.test"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <styled.div>
+        test
+      </styled.div>
+    </a>
+    <Styled(styled.div)>
+      100
+    </Styled(styled.div)>
+  </styled.div>
+  <div>
+    <Styled(styled.div)>
+      mock test
+    </Styled(styled.div)>
+  </div>
+</styled.div>
+`;

@@ -1,9 +1,21 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import App from './App';
+import App from './App'
+import { Provider } from 'react-redux'
+import React from 'react'
+import configureStore from 'redux-mock-store'
+import { shallow } from 'enzyme'
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+const mockStore = configureStore([])
+
+describe('<App>', () => {
+  it('renders without crashing', () => {
+    const store = mockStore({
+      token: 'token-test',
+    })
+    const wrapper = shallow(
+      <Provider store={store}>
+        <App />
+      </Provider>
+    )
+    expect(wrapper).toMatchSnapshot()
+  })
+})

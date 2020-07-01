@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SearchForm> renders without crashing 1`] = `
+<styled.div>
+  <styled.form
+    autoComplete="off"
+    onSubmit={[Function]}
+  >
+    <styled.input
+      name="repoName"
+      onChange={[Function]}
+      placeholder="Search Repositories by name"
+      value=""
+    />
+  </styled.form>
+  <styled.button
+    onClick={[MockFunction]}
+  >
+    Clear Results
+  </styled.button>
+</styled.div>
+`;

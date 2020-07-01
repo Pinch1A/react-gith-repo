@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route, Switch } from 'react-router'
+import { BrowserRouter } from 'react-router-dom'
+import { Home } from './components/Home/Home'
+import PrivateRouter from './hoc/PrivateRouter'
+import React from 'react'
+import TokenValidator from './containers/TokenValidator/TokenValidation'
+import { connect } from 'react-redux'
+import styled from 'styled-components'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export const Button = styled.button`
+  background-color: ${(props) => (props.primary ? 'orange' : 'grey')};
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  line-height: 31px;
+  cursor: pointer;
+`
+
+const App = (props) => (
+  <div className="App">
+    <BrowserRouter>
+      <Switch>
+        <Route path="/token" component={TokenValidator} />
+        <PrivateRouter path="/repo" token={props.token} />
+        <Route path="/" component={Home} />
+      </Switch>
+    </BrowserRouter>
+  </div>
+)
+
+const mapStateToProps = (state) => {
+  return {
+    token: state.tokenValidator.token,
+  }
 }
 
-export default App;
+export default connect(mapStateToProps)(App)

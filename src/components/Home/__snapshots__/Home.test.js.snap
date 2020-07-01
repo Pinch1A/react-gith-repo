@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home> renders without crashing 1`] = `
+<styled.main>
+  <styled.header>
+    <styled.h3>
+      GitHub Repo Finder
+    </styled.h3>
+    <p>
+      A simple application which interact with GitHub API V4 with the help of Access token
+    </p>
+  </styled.header>
+  <styled.div>
+    <styled.ul>
+      <styled.li>
+        Validate your Access token
+      </styled.li>
+      <styled.li>
+        Find a GitHub Public Repo
+      </styled.li>
+      <styled.li>
+        Provides the repo details of Results
+      </styled.li>
+    </styled.ul>
+  </styled.div>
+  <styled.button
+    onClick={[Function]}
+    primary={true}
+  >
+    Go!
+     
+  </styled.button>
+</styled.main>
+`;

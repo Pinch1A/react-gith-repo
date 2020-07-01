@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RepoList> renders without crashing 1`] = `
+<Fragment>
+  <Styled(styled.div)>
+    <Repo
+      key="id-1-0"
+      repository={
+        Object {
+          "description": "mock test 1",
+          "id": "id-1",
+          "name": "test-1",
+          "stargazers": Object {
+            "totalCount": 101,
+          },
+        }
+      }
+    />
+    <Repo
+      key="id-2-1"
+      repository={
+        Object {
+          "description": "mock test 2",
+          "id": "id-2",
+          "name": "test-2",
+          "stargazers": Object {
+            "totalCount": 102,
+          },
+        }
+      }
+    />
+  </Styled(styled.div)>
+  <Styled(styled.div)>
+    <styled.button
+      href="#top"
+    >
+      No more results,Go To Top
+    </styled.button>
+  </Styled(styled.div)>
+</Fragment>
+`;
